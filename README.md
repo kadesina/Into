@@ -1,26 +1,67 @@
 # Introduction 
 
-  The Active Directory lab is focused on detecting unauthorized user activity. It includes creating alerts in Splunk, and integrating Slack and Shuffle for automated detection and response. The lab is deployed on the [Vultr cloud platform](https://www.vultr.com/) , providing a scalable and realistic environment for hands-on cybersecurity training.
-I will be using this labs to get hands on skills learning splunk and shuffle, as i have never used any of these platforms before. Ill also be configuring a firewall within the cloud envuironmment whichwill also give me some networking experience within a SOC enviroment. 
+# 🔐 Active Directory Detection & Response Lab
 
-- Part 1 (Building a logical diagram for visiaulaization)
-  > This will help with understanding how the environment will look like.
-    
-- Part 2 (Setting up the cloud environment)
-  > - Deploy windows server
-  > - Deploy ubuntu server
-- Part 3 (Install and Setup Active Directory)
-  > In this part of the project, I will install Active Directory on my server and promote it to a Domain Controller. Additionally, I will join a computer to the domain and create several user accounts. To verify everything is working correctly, I’ll log in as one of the users and ensure proper authentication and domain functionality.
-- Part 4 (Configure Splunk and Create Alerts)
-  > In this part im going to configure and install splunk on an ubuntu server that ill be deplying on on vultr, then start ingesting telemetry from collected from windows enpoint. Then ill create an alert that detects unauthorized successful logins. 
-- Part 5 (Integrate Slack & Shuffle for Automation)
-  
-  > The goal of this final phase is to create a small automation playbook for handling successful unauthorized login attempts. When such an event is detected:
-  > - A notification will be sent to Slack
-  > - An email will be sent to the SOC analyst, asking whether to disable the user account
-  > - If the analyst replies "yes", the user will be automatically disabled
-     
-  > This workflow will be built using Shuffle and will simulate a real-world SOAR (Security Orchestration, Automation, and Response) process.
+This lab focuses on detecting **unauthorized user activity** within an Active Directory environment using **Splunk**, **Slack**, and **Shuffle** for detection and automated response. It is deployed on the **Vultr cloud platform**, providing a scalable and realistic environment for hands-on cybersecurity training.
 
+I’m using this project to gain real-world experience with:
+- **Splunk** and **Shuffle** (first-time use)
+- **Firewall configuration** to improve my networking skills
+- **SOC-style detection and automation workflows**
+
+---
+
+## 📁 Project Breakdown
+
+### ✅ Part 1: Building a Logical Diagram
+- Create a logical diagram to visualize the environment and data flow.
+- Helps clarify how systems will interact and where telemetry is collected.
+
+---
+
+### ☁️ Part 2: Setting Up the Cloud Environment
+- Deploy a **Windows Server** (for AD and test user login)
+- Deploy an **Ubuntu Server** (for Splunk)
+- Configure a **firewall** to control inbound/outbound access
+
+---
+
+### 🏢 Part 3: Install and Configure Active Directory
+- Install Active Directory on the Windows Server
+- Promote it to a **Domain Controller**
+- Join a second Windows machine to the domain
+- Create multiple user accounts
+- Log in with one user to verify domain authentication is working
+
+---
+
+### 📊 Part 4: Configure Splunk & Create Alerts
+- Install Splunk on the Ubuntu server
+- Configure Splunk to ingest telemetry from Windows endpoints
+- Create an **alert** for detecting successful unauthorized logins
+
+---
+
+### 🤖 Part 5: Integrate Slack & Shuffle for SOAR Automation
+- Create an automation playbook in **Shuffle**:
+  - When an unauthorized login is detected:
+    - A notification is sent to **Slack**
+    - An email is sent to the **SOC analyst**
+    - If the analyst replies `"yes"`, the user is automatically disabled
+    - If `"no"`, no action is taken
+  - A final confirmation is sent to Slack once action is completed
+
+This simulates a **real-world SOAR process**, automating detection and response within a blue team workflow.
+
+---
+
+## 🛠️ Technologies Used
+- Vultr (Cloud Hosting)
+- Windows Server & Active Directory
+- Ubuntu Server
+- Splunk (SIEM)
+- Shuffle (SOAR)
+- Slack (Notifications)
+- Firewall Configuration (Networking/Security)
 
   
