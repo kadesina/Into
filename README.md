@@ -1,6 +1,6 @@
 # Introduction 
 
-# 🔐 Active Directory Detection & Response Lab
+# 🔐 Active Directory Detection & Response Project
 
 This lab focuses on detecting **unauthorized user activity** within an Active Directory environment using **Splunk**, **Slack**, and **Shuffle** for detection and automated response. It is deployed on the **Vultr cloud platform**, providing a scalable and realistic environment for hands-on cybersecurity training.
 
